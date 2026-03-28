@@ -1,0 +1,49 @@
+/* CSS BY Brooke Gilman */
+
+/* IMPORTED FONTS */
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --accent: #4a90e2;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+body {
+  max-width: 450px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 1rem;
+}
+
+header > h1 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+main > section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+}
+
+main > section > h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1rem;
+}

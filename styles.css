@@ -1,13 +1,13 @@
 /* CSS BY Brooke Gilman */
 
 /* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,130 +17,257 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-display: block;
+  display: block;
 }
 
 body {
-line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-content: '';
-content: none;
+  content: '';
+  content: none;
 }
 
 table {
-border-collapse: collapse;
-border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* ROOT VARIABLES */
 :root {
---max-width:450px;
---primary:#2c2c2c;
---accent:#5c7a7a;
---bg:#f7f4ef;
+  --max-width: 450px;
+  --purple-dark: #3b2a6e;
+  --purple-mid: #5c4b9e;
+  --purple-light: #7b68c8;
+  --teal: #4db6ac;
+  --pink: #f06292;
+  --yellow: #ffd54f;
+  --lavender: #b39ddb;
+  --white: #ffffff;
+  --light-bg: #f5f3fb;
+  --text-dark: #2c2c2c;
+  --text-muted: #666666;
+  --btn-services: #5c4b9e;
+  --btn-why: #7b68c8;
+  --btn-prices: #9c8fd4;
+  --btn-cta: #f06292;
 }
 
 /* GLOBAL STYLES (mobile first/small) */
 
 body {
-font-family: Arial, Helvetica, sans-serif;
-background: var(--bg);
-color: var(--primary);
-max-width: var(--max-width);
-margin: auto;
-padding: 16px;
-line-height:1.5;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
+/* ---- HEADER ---- */
 header {
-text-align:center;
-margin-bottom:20px;
+  background-color: var(--purple-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px 24px;
 }
 
-h1 {
-font-size:28px;
-margin-bottom:10px;
+header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
-h2 {
-font-size:20px;
-margin-bottom:8px;
-color:var(--accent);
+header p {
+  font-size: 13px;
+  color: #c9b8f0;
+  line-height: 1.4;
 }
 
+/* ---- NAV ---- */
+nav {
+  background-color: var(--purple-dark);
+  padding: 0 16px 16px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav ul li:nth-child(1) a { background-color: #5c4b9e; }
+nav ul li:nth-child(2) a { background-color: #7c6bbd; }
+nav ul li:nth-child(3) a { background-color: #9c8fd4; }
+nav ul li:nth-child(4) a { background-color: var(--pink); }
+
+nav ul li a:hover {
+  opacity: 0.85;
+}
+
+/* ---- MAIN ---- */
+main {
+  padding: 16px;
+}
+
+/* ---- SECTIONS ---- */
 section {
-background:white;
-padding:20px;
-margin-bottom:16px;
-border-radius:8px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 16px;
 }
 
-footer {
-text-align:center;
-font-size:14px;
-margin-top:20px;
+section section {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
+/* ---- HEADINGS ---- */
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--purple-dark);
+  margin-bottom: 12px;
+}
 
-/* 👇 PASTE NEW CODE RIGHT HERE */
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--purple-mid);
+  margin-bottom: 8px;
+}
 
+p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* ---- IMAGES (icons) ---- */
+img {
+  width: 52px;
+  height: 52px;
+  display: block;
+  margin: 8px auto;
+}
+
+/* ---- WHY CHOOSE US LIST ---- */
+#why-choose-us ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+#why-choose-us ul li {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ---- TABLES ---- */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 15px 0 30px 0;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+thead tr {
+  background-color: var(--purple-dark);
+  color: var(--white);
 }
 
 th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 9px 12px;
   text-align: left;
+  border: 1px solid #ddd;
 }
 
-th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+tbody tr:nth-child(even) {
+  background-color: #f0edf8;
 }
 
-section {
-  margin-bottom: 40px;
+/* ---- FOOTER ---- */
+footer {
+  background-color: var(--purple-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 24px 20px;
 }
 
-a {
+footer section {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+footer h2 {
+  color: var(--white);
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #c9b8f0;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+footer a {
   display: inline-block;
-  margin-top: 10px;
-  color: white;
-  background-color: #6c63ff;
-  padding: 10px 15px;
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 14px;
 }
 
-a:hover {
-  background-color: #574fd6;
+footer a:hover {
+  opacity: 0.85;
 }
